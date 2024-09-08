@@ -13,11 +13,6 @@ Clone the repository:
 git clone https://github.com/AshkhenArakelyan/wrike-basic-api-integration.git
 ```
 
-Switch to the develop branch:
-```bash
-git checkout develop
-```
-
 Navigate to the project directory:
 ```bash
 cd wrike-basic-api-integration
