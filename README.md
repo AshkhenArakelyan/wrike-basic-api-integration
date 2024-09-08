@@ -1,5 +1,5 @@
 # wrike-basic-api-integration
-Wrike's basic API integration is for fetching all tasks from Wrike.
+Wrike basic API integration is for fetching all tasks from Wrike.
 
 ## Prerequisites
 
