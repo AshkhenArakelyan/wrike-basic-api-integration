@@ -9,7 +9,7 @@ async function getTasks() {
   try {
     const tasks = await tasksData.json();
     const formatedTasks = changeFormat(tasks.data);
-    writeInFile(formatedTasks);
+    await writeInFile(formatedTasks);
   } catch (error) {
     console.log(error.message);
   }
@@ -19,7 +19,7 @@ async function fetchData() {
   try {
     const response = await fetch(requestUrl, {
       headers: {
-        Authorization: `Bearer ${process.env.WRIKE_PERMAMENT_ACCESS_TOKEN}`,
+        Authorization: `Bearer ${process.env.WRIKE_PERMANENT_ACCESS_TOKEN}`,
       },
     });
     if (!response.ok) {
@@ -58,7 +58,7 @@ function changeFormat(tasks) {
   });
 }
 
-function writeInFile(tasks) {
+async function writeInFile(tasks) {
   fs.writeFile("tasks.json", JSON.stringify(tasks), (err) => {
     if (err) {
       console.error(err);

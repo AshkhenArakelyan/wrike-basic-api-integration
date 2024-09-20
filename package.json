@@ -4,7 +4,7 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "dev": "node --require dotenv/config script.js"
+    "dev": "node --require dotenv/config projects.js"
   },
   "repository": {
     "type": "git",
