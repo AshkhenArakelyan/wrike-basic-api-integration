@@ -1,4 +1,4 @@
-async function fetchData(requestUrl) {
+async function fetchData(requestUrl: string) {
     try {
       const response = await fetch(requestUrl, {
         headers: {
@@ -8,11 +8,11 @@ async function fetchData(requestUrl) {
       if (!response.ok) {
         throw new Error(response.status + " " + response.statusText);
       }
-      return response;
+      return response.json();
     } catch (error) {
-      console.error(error.name + " " + error.message);
+      console.error(error);
       return null;
     }
   }
 
-  module.exports = {fetchData}
+  export {fetchData}
